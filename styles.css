@@ -34,6 +34,23 @@ nav a {
     text-decoration: none;
     margin-left: 2rem;
     transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 nav a:hover {
@@ -348,28 +365,46 @@ nav a:hover::after {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
+    z-index: 10;
 }
 
-.project-links a {
-    color: var(--text-color);
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 6px;
+    color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.project-links .github {
-    background: rgba(100, 181, 246, 0.1);
-}
-
-.project-links .demo {
-    border: 1px solid var(--accent-color);
-}
-
-.project-links a:hover {
-    background: var(--accent-color);
+.project-link:hover {
+    background: rgba(100, 181, 246, 0.2);
     transform: translateY(-2px);
-} 
+}
+
+.project-link i {
+    color: #64B5F6;
+}
+
+.project-card * {
+    pointer-events: auto;
+}
+
+/* Make sure links are clickable */
+.project-link {
+    position: relative;
+    z-index: 1;
+}
+
+/* Prevent any overlapping elements */
+.project-card {
+    position: relative;
+    overflow: visible;
+}
 
 /* Add padding to main content to prevent it from hiding behind fixed header */
 main {
