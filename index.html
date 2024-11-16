@@ -22,6 +22,16 @@
 
         <div class="logo">VK</div>
 
+        <div class="hamburger">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </div>
+
         <nav>
 
             <a href="#" class="nav-link">Home</a>
@@ -33,12 +43,6 @@
             <a href="#contact" class="nav-link">Contact</a>
 
         </nav>
-
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 
     </header>
 
@@ -1006,6 +1010,39 @@
         <p>© 2024 Vaibhav Kumawat. All rights reserved.</p>
 
     </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Debug log to verify script is running
+            console.log('Script loaded');
+
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+            
+            // Debug log to verify elements are found
+            console.log('Hamburger:', hamburger);
+            console.log('Nav:', nav);
+
+            hamburger.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Hamburger clicked'); // Debug log
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+                console.log('Menu state:', nav.classList.contains('active')); // Debug log
+            });
+
+            // Close menu when clicking links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 

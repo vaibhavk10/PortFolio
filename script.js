@@ -115,32 +115,46 @@ document.querySelector('.copy-btn').addEventListener('click', async function() {
 });
 
 // Mobile menu functionality
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
-const body = document.body;
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const body = document.body;
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    nav.classList.toggle('active');
-    body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-        body.style.overflow = 'auto';
-    });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (nav.classList.contains('active') && 
-        !nav.contains(e.target) && 
-        !hamburger.contains(e.target)) {
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-        body.style.overflow = 'auto';
+    if (!hamburger || !nav) {
+        console.error('Menu elements not found');
+        return;
     }
+
+    // Toggle menu
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
+        
+        // Debug log
+        console.log('Menu clicked', {
+            hamburgerActive: hamburger.classList.contains('active'),
+            navActive: nav.classList.contains('active')
+        });
+    });
+
+    // Close menu when clicking links
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            body.style.overflow = 'auto';
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (nav.classList.contains('active') && 
+            !nav.contains(e.target) && 
+            !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            body.style.overflow = 'auto';
+        }
+    });
 });
