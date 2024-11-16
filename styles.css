@@ -927,7 +927,7 @@ header.scrolled {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 16px;
+        padding: 0 0px;
         box-sizing: border-box;
     }
 
@@ -944,27 +944,32 @@ header.scrolled {
 
     /* Project Links */
     .project-links {
-        width: 100%;
+        width: 85%;
+        margin: 1.5rem auto;
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
-        margin-top: 1rem;
     }
 
+    /* Individual Project Link Button */
     .project-link {
         width: 100%;
         padding: 0.8rem;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
         box-sizing: border-box;
     }
 
-    /* Tech Stack */
+    /* Keep other elements alignment unchanged */
+    .project-header,
+    .project-description,
     .tech-stack {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        margin: 1rem 0;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
 } 
 
@@ -1370,5 +1375,34 @@ header.scrolled {
     .username {
         word-break: break-all;
         font-size: 0.9rem;
+    }
+} 
+
+@media (max-width: 768px) {
+    /* Project Subtitle */
+    .project-subtitle {
+        text-align: center;
+        width: 100%;
+        margin: 0.5rem auto;
+        color:  #64B5F6;
+        font-size: 0.9rem;
+    }
+
+    /* Project Links Container */
+    .project-links {
+        width: 85%;
+        margin: 1.5rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Keep other elements alignment unchanged */
+    .project-header,
+    .project-description,
+    .tech-stack {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
 } 
