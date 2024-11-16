@@ -965,3 +965,95 @@ header.scrolled {
     transform: translateY(-2px);
     background: rgba(40, 40, 40, 0.9);
 } 
+
+/* Glowing border effect for contact cards */
+.contact-row {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.contact-row:hover {
+    border-color: #64B5F6;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5),
+                inset 0 0 15px rgba(100, 181, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Specific styling for email card */
+.email-card {
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.email-card:hover {
+    border-color: #64B5F6;
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.5),
+                inset 0 0 15px rgba(100, 181, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Social media cards */
+.social-card {
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.social-card:hover {
+    border-color: #64B5F6;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5),
+                inset 0 0 15px rgba(100, 181, 246, 0.3);
+    transform: translateY(-2px);
+} 
+
+/* Outer container box glow effect */
+.contact-container {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    background: rgba(30, 30, 30, 0.5);
+    padding: 2rem;
+}
+
+.contact-container:hover {
+    border-color: #64B5F6;
+    box-shadow: 0 0 30px rgba(100, 181, 246, 0.3),
+                inset 0 0 20px rgba(100, 181, 246, 0.2);
+}
+
+/* Inner cards glow effect (your existing styles) */
+.contact-row, .email-card, .social-card {
+    position: relative;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 12px;
+}
+
+.contact-row:hover, .email-card:hover, .social-card:hover {
+    border-color: #64B5F6;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5),
+                inset 0 0 15px rgba(100, 181, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Add a subtle pulse animation to the outer glow */
+@keyframes outerGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(100, 181, 246, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(100, 181, 246, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(100, 181, 246, 0.2);
+    }
+}
+
+.contact-container:hover {
+    animation: outerGlow 2s infinite;
+} 

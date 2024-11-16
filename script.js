@@ -87,3 +87,29 @@ window.addEventListener('scroll', () => {
     const progress = (window.scrollY / windowHeight) * 100;
     progressBar.style.width = `${progress}%`;
 });
+
+// Email copy functionality
+document.querySelector('.copy-btn').addEventListener('click', async function() {
+    const email = 'vaibhavkumawat1003@gmail.com';
+    
+    try {
+        await navigator.clipboard.writeText(email);
+        
+        // Change button text temporarily to show feedback
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        
+        // Reset button text after 2 seconds
+        setTimeout(() => {
+            this.innerHTML = originalText;
+        }, 2000);
+        
+    } catch (err) {
+        console.error('Failed to copy email:', err);
+        this.innerHTML = '<i class="fas fa-times"></i> Failed to copy';
+        
+        setTimeout(() => {
+            this.innerHTML = originalText;
+        }, 2000);
+    }
+});
