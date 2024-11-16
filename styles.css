@@ -750,7 +750,7 @@ header.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     padding: 2rem;
-}
+}   
 
 .project-card {
     background: rgba(255, 255, 255, 0.03);
@@ -900,3 +900,68 @@ header.scrolled {
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; } 
+
+/* Update tech pill icon colors to match the consistent blue theme */
+.tech-pill i {
+    color: #64B5F6; /* This is the consistent blueish color used across your portfolio */
+}
+
+/* Remove any specific icon colors to maintain consistency */
+.tech-pill .fa-node-js,
+.tech-pill .fa-js,
+.tech-pill .fa-code {
+    color: #64B5F6; /* Same blue color for all icons */
+}
+
+.tech-pill {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.tech-pill:hover {
+    transform: translateY(-2px);
+    background: rgba(40, 40, 40, 0.9);
+} 
+
+/* WhatsApp Bot specific tech stack styling */
+.tech-stack-whatsapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1.5rem 0;
+}
+
+.tech-row-whatsapp {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tech-pill-whatsapp {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.tech-pill-whatsapp i {
+    color: #64B5F6;
+}
+
+.tech-pill-whatsapp span {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.tech-pill-whatsapp:hover {
+    transform: translateY(-2px);
+    background: rgba(40, 40, 40, 0.9);
+} 
