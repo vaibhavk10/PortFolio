@@ -36,21 +36,25 @@ nav a {
     transition: color 0.3s ease;
     position: relative;
     padding-bottom: 5px;
+    display: inline-block;
 }
 
 nav a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     background-color: var(--accent-color);
-    transition: width 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
+nav a.active::after,
 nav a:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 nav a:hover {
@@ -414,19 +418,40 @@ h1 {
 }
 
 /* Navigation link hover effect */
+nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
 nav a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 2px;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
     background-color: var(--accent-color);
-    transition: width 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
+nav a.active::after,
 nav a:hover::after {
-    width: 100%;
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    nav a {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    nav a::after {
+        width: 100%;
+        left: 0;
+    }
 }
 
 /* Button hover animations */
@@ -1559,4 +1584,69 @@ header.scrolled {
     .contact-left .fa-envelope {
         font-size: 12px;
     }
+} 
+
+/* Background Animation Container */
+.background-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced section-specific backgrounds */
+.background-transition[data-section="home"] {
+    background: linear-gradient(135deg,
+        #0a0a0a 0%,
+        #1a1a2e 50%,
+        #16213e 100%
+    );
+}
+
+.background-transition[data-section="projects"] {
+    background: linear-gradient(135deg,
+        #1a1a2e 0%,
+        #2b1b4d 50%,
+        #1a1a2e 100%
+    );
+}
+
+.background-transition[data-section="skills"] {
+    background: linear-gradient(135deg,
+        #1a1a2e 0%,
+        #1b3a4d 50%,
+        #1a1a2e 100%
+    );
+}
+
+.background-transition[data-section="contact"] {
+    background: linear-gradient(135deg,
+        #1a1a2e 0%,
+        #2d1b3d 50%,
+        #1a1a2e 100%
+    );
+}
+
+/* Ambient light effect */
+.background-transition::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(100, 181, 246, 0.08) 0%,
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.background-transition:hover::after {
+    opacity: 1;
 } 

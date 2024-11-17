@@ -184,3 +184,71 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Create background container
+    const backgroundEl = document.createElement('div');
+    backgroundEl.className = 'background-transition';
+    backgroundEl.setAttribute('data-section', 'home');
+    document.body.prepend(backgroundEl);
+
+    // Track mouse position for ambient light effect
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        backgroundEl.style.setProperty('--mouse-x', `${x}%`);
+        backgroundEl.style.setProperty('--mouse-y', `${y}%`);
+    });
+
+    // Intersection Observer for sections
+    const sections = document.querySelectorAll('section[id]');
+    const observerOptions = {
+        threshold: 0.4,
+        rootMargin: '-20% 0px'
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.id;
+                backgroundEl.setAttribute('data-section', sectionId);
+                
+                // Update active nav link
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.toggle('active', 
+                        link.getAttribute('href') === `#${sectionId}`);
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => sectionObserver.observe(section));
+});
+document.addEventListener('DOMContentLoaded', () => {
+    // Debug log to verify script is running
+    console.log('Script loaded');
+
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    
+    // Debug log to verify elements are found
+    console.log('Hamburger:', hamburger);
+    console.log('Nav:', nav);
+
+    hamburger.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Hamburger clicked'); // Debug log
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        console.log('Menu state:', nav.classList.contains('active')); // Debug log
+    });
+
+    // Close menu when clicking links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+});
