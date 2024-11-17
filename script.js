@@ -158,3 +158,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+    // Email copy functionality
+    const emailRow = document.querySelector('.email-row');
+    const emailText = 'vaibhavkumawat1003@gmail.com'; // Your email address
+
+    emailRow.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(emailText);
+            
+            // Optional: Show feedback tooltip
+            const tooltip = document.createElement('div');
+            tooltip.className = 'copy-tooltip';
+            tooltip.textContent = 'Email copied!';
+            emailRow.appendChild(tooltip);
+            
+            // Remove tooltip after 2 seconds
+            setTimeout(() => {
+                tooltip.remove();
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    });
+});

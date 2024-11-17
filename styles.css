@@ -96,15 +96,89 @@ nav a:hover {
     opacity: 0;
 }
 
-h1 {
+.gradient-name {
+    position: relative;
     font-size: 4.5rem;
+    font-weight: 700;
     margin: 0.5rem 0;
-    background: linear-gradient(to right, #fff, var(--accent-color));
+    line-height: 1.2;
+    text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        120deg,
+        #ff6b6b 0%,
+        #ff59b4 20%,
+        #4facfe 40%,
+        #9f5fff 60%,
+        #ff6b6b 80%
+    );
+    background-size: 200% auto;
+    color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    animation: fadeInUp 0.5s ease forwards 0.2s;
-    opacity: 0;
+    animation: gradientFlow 8s linear infinite;
+    position: relative;
+    display: inline-block;
+}
+
+.gradient-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: blur(12px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .gradient-name {
+        font-size: min(8.5vw, 4rem);
+        white-space: nowrap;
+        overflow: visible;
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0.5rem auto;
+    }
+
+    .gradient-text {
+        letter-spacing: -0.8px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-top: -40px;
+    }
+}
+
+/* Optional: Add hover effect */
+.gradient-text:hover {
+    animation-play-state: paused;
+    cursor: default;
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
 }
 
 .introduction {
@@ -227,6 +301,10 @@ h1 {
     background: rgba(30, 30, 30, 0.6);
     border-radius: 8px;
     margin: 0.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 100%;
 }
 
 .contact-info {
@@ -491,7 +569,6 @@ header.scrolled {
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -634,6 +711,9 @@ header.scrolled {
 .username {
     color: #888;
     font-size: 0.9rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .copy-btn, .external-link {
@@ -1404,5 +1484,79 @@ header.scrolled {
         width: 100%;
         padding: 0 1rem;
         box-sizing: border-box;
+    }
+} 
+
+/* Add cursor pointer */
+.email-row {
+    cursor: pointer;
+}
+
+/* Tooltip styles */
+.copy-tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInOut 2s ease;
+    pointer-events: none;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Make sure email row container has relative positioning */
+.contact-row.email-row {
+    position: relative;
+} 
+
+/* Icon background styles */
+.contact-row .contact-info i,
+.contact-left i {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(100, 181, 246, 0.1);
+    color: #64B5F6;
+    transition: all 0.3s ease;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+/* Specific fix for email icon */
+.contact-row .contact-info .fa-envelope,
+.contact-left .fa-envelope {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .contact-row .contact-info i,
+    .contact-left i {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    .contact-row .contact-info .fa-envelope,
+    .contact-left .fa-envelope {
+        font-size: 12px;
     }
 } 
