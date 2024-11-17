@@ -279,10 +279,22 @@ nav a:hover {
 }
 
 .project-card {
-    background: var(--card-bg);
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 16px;
     padding: 2rem;
-    border-radius: 1rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+    background: rgba(30, 30, 30, 0.7);
+    border-color: #64B5F6;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5),
+                inset 0 0 15px rgba(100, 181, 246, 0.3);
+    transform: translateY(-2px);
 }
 
 .tech-stack span {
@@ -923,31 +935,19 @@ header.scrolled {
 }   
 
 .project-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(30, 30, 30, 0.9);
     border-radius: 16px;
     padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 0.5s ease forwards;
-    opacity: 0;
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(100, 181, 246, 0.03));
-    z-index: 0;
+    border: 1px solid transparent;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #64B5F6;
+    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5),
+                inset 0 0 15px rgba(100, 181, 246, 0.3);
+    transform: translateY(-2px);
 }
 
 .project-header {
@@ -1059,10 +1059,7 @@ header.scrolled {
     /* Projects Container */
     .projects-container {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 0px;
+        padding: 0 1rem;
         box-sizing: border-box;
     }
 
@@ -1071,40 +1068,40 @@ header.scrolled {
         width: 100%;
         margin: 1rem 0;
         padding: 1.5rem;
-        box-sizing: border-box;
-        background: rgba(30, 30, 30, 0.95);
         border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Project Links */
-    .project-links {
-        width: 85%;
-        margin: 1.5rem auto;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    /* Individual Project Link Button */
-    .project-link {
-        width: 100%;
-        padding: 0.8rem;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-
-    /* Keep other elements alignment unchanged */
-    .project-header,
-    .project-description,
-    .tech-stack {
+    /* Skills Container */
+    .skills-container {
         width: 100%;
         padding: 0 1rem;
         box-sizing: border-box;
+    }
+
+    /* Skills Category Card */
+    .skill-category {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    /* Project Links Container */
+    .project-links {
+        width: 100%;
+        margin: 1rem 0;
+        gap: 0.8rem;
+    }
+
+    /* Project Link Button */
+    .project-link {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Section padding */
+    #projects, #skills {
+        padding: 2rem 1rem;
     }
 } 
 
