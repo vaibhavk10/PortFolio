@@ -366,6 +366,8 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 footer {
@@ -769,8 +771,10 @@ header.scrolled {
 } 
 
 #skills {
-    padding: 6rem 2rem;
-    background: var(--bg-color);
+    margin-top: 75px;
+    background: rgba(10, 10, 10, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .skills-container {
@@ -879,8 +883,10 @@ header.scrolled {
 } 
 
 #projects {
-    padding: 6rem 2rem;
-    background: var(--bg-color);
+    margin-bottom: 75px;
+    background: rgba(10, 10, 10, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .projects-container {
@@ -1608,17 +1614,17 @@ header.scrolled {
 
 .background-transition[data-section="projects"] {
     background: linear-gradient(135deg,
-        #1a1a2e 0%,
-        #2b1b4d 50%,
-        #1a1a2e 100%
+        #0a0a0a 0%,
+        #0d0d1a 50%,
+        #0a0a0a 100%
     );
 }
 
 .background-transition[data-section="skills"] {
     background: linear-gradient(135deg,
-        #1a1a2e 0%,
-        #1b3a4d 50%,
-        #1a1a2e 100%
+        #0a0a0a 0%,
+        #0d0d1a 50%,
+        #0a0a0a 100%
     );
 }
 
