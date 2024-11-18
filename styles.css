@@ -118,7 +118,30 @@ nav a:hover {
     }
     
     nav {
-        gap: 1.5rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 2rem;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 }
 
