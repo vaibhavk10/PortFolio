@@ -20,32 +20,29 @@
 
     <header>
 
+        <div class="logo">VK</div>
+
+        <div class="hamburger">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </div>
+
         <nav>
-             <div class="logo">VK</div>
 
-             <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
 
-                 <a href="#" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
 
-                 <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
 
-                 <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
 
-                 <a href="#contact" class="nav-link">Contact</a>
-
-             </div>
-
-             <div class="hamburger">
-
-                 <span></span>
-
-                 <span></span>
-
-                 <span></span>
-
-             </div>
-
-         </nav>
+        </nav>
 
     </header>
 
@@ -59,9 +56,7 @@
 
                 <p class="hello-text">Hello, I'm</p>
 
-                <h1 class="gradient-name">
-                    <span class="gradient-text">Vaibhav Kumawat</span>
-                </h1>
+                <h1>Vaibhav Kumawat</h1>
 
                 <div class="introduction">
 
@@ -904,15 +899,25 @@
 
                     <div class="contact-row email-row">
 
-                        <div class="contact-info">
+                        <div class="contact-left">
 
-                            <i class="far fa-envelope"></i>
+                            <div class="icon-box">
 
-                            <span>vaibhavkumawat1003@gmail.com</span>
+                                <i class="far fa-envelope"></i>
+
+                            </div>
+
+                            <span class="email">vaibhavkumawat1003@gmail.com</span>
 
                         </div>
 
-                        <button class="copy-btn">Copy Email</button>
+                        <button class="copy-btn" aria-label="Copy email address">
+
+                            <i class="far fa-copy"></i>
+
+                            <span>Copy Email</span>
+
+                        </button>
 
                     </div>
 
@@ -1006,39 +1011,8 @@
 
     </footer>
 
+    <script src="script.js"></script>
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Debug log to verify script is running
-            console.log('Script loaded');
-
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('nav');
-            
-            // Debug log to verify elements are found
-            console.log('Hamburger:', hamburger);
-            console.log('Nav:', nav);
-
-            hamburger.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('Hamburger clicked'); // Debug log
-                hamburger.classList.toggle('active');
-                nav.classList.toggle('active');
-                console.log('Menu state:', nav.classList.contains('active')); // Debug log
-            });
-
-            // Close menu when clicking links
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    nav.classList.remove('active');
-                });
-            });
-        });
-    </script>
-<script src="script.js"></script>
 </body>
 
 </html> 
