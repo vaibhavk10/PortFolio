@@ -1148,7 +1148,7 @@ header.scrolled {
 }
 
 .contact-row:hover, .email-card:hover, .social-card:hover {
-    border-color: #64B5F6;
+    border-color: #008cff;
     box-shadow: 0 0 15px rgba(100, 181, 246, 0.5),
                 inset 0 0 15px rgba(100, 181, 246, 0.3);
     transform: translateY(-2px);
