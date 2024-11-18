@@ -108,12 +108,38 @@ nav a:hover {
 h1 {
     font-size: 4.5rem;
     margin: 0.5rem 0;
-    background: linear-gradient(to right, #fff, var(--accent-color));
+    background: linear-gradient(
+        to right,
+            #FC466B,  /* Pink */
+            #3F5EFB,  /* Blue */
+            #00F260,  /* Green */
+            #FA709A,  /* Light Pink */
+            #FC466B   /* Back to Pink */
+    );
+    background-size: 300% auto;
+    color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    animation: fadeInUp 0.5s ease forwards 0.2s;
-    opacity: 0;
+    animation: gradient 8s linear infinite;
+    font-weight: 700;
+    text-align: center;
+    opacity: 1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 .introduction {
