@@ -1,1022 +1,580 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="Vaibhav Kumawat - Full Stack Developer Portfolio">
+    <meta name="description"
+        content="Discover Vaibhav Kumawat's professional portfolio showcasing expertise in full-stack development, web applications, and innovative solutions. Explore projects, skills, and achievements.">
+    <meta name="keywords"
+        content="Vaibhav Kumawat, Full Stack Developer, Portfolio, Web Development, React.js, Frontend, Backend, Software Engineer, Professional Portfolio, Innovative Solutions, portfolio website">
+    <meta name="author" content="Vaibhav Kumawat">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>Vaibhav Kumawat Portfolio</title>
+    <!--=================== Main CSS ====================-->
+    <link rel="stylesheet" href="main.css">
+    <!--=================== Google Fonts ====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <title>Vaibhav Kumawat</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!--=================== Remixicons ====================-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--=================== SwiperJS CSS ====================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 </head>
 
 <body>
 
-    <div class="network-background">
-        <canvas id="networkCanvas"></canvas>
-    </div>
+    <!--=================== Header ====================-->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="nav__brand">
+                    <i class="ri-code-s-slash-line"></i>V<Span>K</Span>
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#hero" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">Qualification</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#project" class="nav__link">Projects</a>
+                        </li>
 
-    <header>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle">
+                    <i id="nav-toggle" class="ri-menu-3-line"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--=================== main ====================-->
+    <main class="main">
+        <!--=================== Hero ====================-->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="d-grid hero__wrapper">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Hi, I am Vaibhav Kumawat</h1>
+                        <h2 id="typewriter"
+                            style="font-size: 25px; font-weight: bold; color: #1e90ff; border-right: 2px solid #1e90ff; white-space: nowrap; overflow: hidden; display: inline-block;">
+                        </h2>
+                        <p style="margin-top:15px;" class="hero__description">🌟 A passionate and dedicated
+                            undergraduate student currently pursuing a B.Tech in Electronics and Computer Engineering at
+                            Vellore Institute of Technology, Chennai. With a strong foundation in technology and a keen
+                            interest in innovation, I strive to enhance my skills and contribute to impactful projects
+                            that drive organizational and personal growth.
+                        </p>
+                        <a href="mailto:vaibhavkumawat1003@gmail.com" class="btn--primary"
+                            style="padding:1.5rem 4rem;margin-bottom:10px;display:inline-block;">Hire Me!</a>
+                        <div class="hero__info">
+                            <div class="hero__info-wrapper">
+                                <p class="hero__info-number">Explore</p>
+                                <h3 class="hero__info-title">more...</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/img/profile-pic1.png" alt="Vaibhav Kumawat" class="hero__img">
+                </div>
+            </div>
+        </section>
+        <!--=================== About ====================-->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <span class="section__subtitle">Who am I</span>
+                </div>
+                <div class="d-grid about__wrapper">
+                    <div class="about__content">
+                        <h3 class="about__title">I'm a Android & Web Developer.</h3>
+                        <p class="about__description">Hello, I'm Vaibhav Kumawat, a dedicated web and Android developer
+                            with a passion for building responsive websites and intuitive mobile applications. My
+                            journey in technology began with a deep interest in how applications can improve everyday
+                            life, leading me to pursue extensive training in both web and Android app development.
+                        </p>
+                        <a href="#project" class="btn btn--primary">Know More</a>
+                    </div>
+                    <div class="skills">
+                        <h3 class="skills__title">Technologies I've been working with:</h3>
+                        <div class="skills__wrapper">
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Tools</h4>
+                                <ul class="skills__list">
 
-        <div class="logo">VK</div>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Git</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Heroku</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Firebase</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Kali Linux</li>
+                                </ul>
+                            </div>
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Programming</h4>
+                                <ul class="skills__list">
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        HTML</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        CSS</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        JavaScript</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Java</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Python</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        SQL</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Kotlin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="hamburger">
+        <!--=================== Qualification ====================-->
+        <section id="qualification" class="section qualification">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Qualification</h2>
+                    <span class="section__subtitle">Experience & Education</span>
+                </div>
+                <!--============== Professional Experience ============-->
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-briefcase-fill"></i>
+                        Experience
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <!-- Experience 1-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Android Developer Remote Intern</h3>
+                            <p class="qualification__description">Android App Developer Intern at SmartInternz (Remote):
+                                During this three-month internship, I focused on developing Android applications, honing
+                                skills in Kotlin and Android Studio. I contributed to projects that enhanced user
+                                engagement and improved app functionality, receiving commendable feedback for my
+                                problem-solving abilities and attention to detail.
+                            </p>
+                            <span class="qualification__date">2023(Sep-Nov)</span>
+                        </div>
+                    </div>
+                </div>
+                <!--============== Education ============-->
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-booklet-fill"></i>
+                        Education
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <!-- Education 1-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Bachelor's in Electronics & Computer Engineering</h3>
+                            <h4 class="qualification__title">Vellore Institute of Technology, Chennai</h4>
+                            <p class="qualification__description">Focusing on software engineering principles,
+                                algorithms, and data structures, alongside hands-on development experience.
+                            </p>
+                            <span class="qualification__date">2021 - Currently</span>
+                            <p class="qualification__cgpa">CGPA: 8.06</p>
+                        </div>
+                        <!-- Education 2-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">12th</h3>
+                            <h4 class="qualification__title">Matrix High School, Sikar</h4>
+                            <span class="qualification__date">2020-2021</span>
+                            <p class="qualification__percentage">Percentage: 96.80%</p>
+                        </div>
+                        <!-- Education 3-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">10th</h3>
+                            <h4 class="qualification__title">Gurukul Academy School</h4>
+                            <p class="qualification__description">
+                            </p>
+                            <span class="qualification__date">2019</span>
+                            <p class="qualification__percentage">Percentage: 88.67%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="qualification__footer">
+                    <p class="qualification__footer-text">See my full resume</p>
+                    <a href="./assets/Vaibhavk10_Resume.pdf" download class="btn btn--primary">Resume</a>
+                </div>
+            </div>
+        </section>
 
-            <span></span>
+        <!--=================== services ====================-->
+        <section id="services" class="section services" style="padding: 80px 0; background-color: inherit;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+                <h2 style="font-size: 32px; font-weight: bold; text-align: center; color: white; margin-bottom: 32px;">
+                    Services
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                    <!-- Front-End Development -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-layout-4-fill" style="font-size: 40px; color: #4299e1;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Front-End Development
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Creating responsive and interactive user
+                            interfaces using modern web technologies.</p>
+                    </div>
 
-            <span></span>
+                    <!-- UI/UX Design -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-pen-nib-fill" style="font-size: 40px; color: #9f7aea;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            UI/UX Design
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Designing intuitive and visually appealing user
+                            experiences for web and mobile applications.</p>
+                    </div>
 
-            <span></span>
+
+                    <!-- Mobile App Development -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-smartphone-line" style="font-size: 40px; color: #319795;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Mobile App Development
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Building user-friendly mobile applications for
+                            Android platforms using Kotlin.</p>
+                    </div>
+
+
+                    <!-- AI Chatbot Development -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-chat-3-line" style="font-size: 40px; color: #5a67d8;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            AI Chatbot Development
+                        </h3>
+                        <p style="color: #718096; text-align: center;">AI-powered chatbots employing the latest APIs for
+                            real-time interaction and automation, enhancing customer service and user engagement.</p>
+                    </div>
+
+                    <!-- Graphic Designing Services -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-palette-line" style="font-size: 40px; color: #d45757;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Graphic Designing Services
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Delivering innovative designs to elevate your
+                            brand and captivate your audience using Canva, and AI tools.</p>
+                    </div>
+
+                    <!-- IoT Solutions-->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-router-line" style="font-size: 40px; color: #577ad4;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            IoT Solutions
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Develop Internet of Things (IoT) solutions
+                            focusing on early detection systems using predictive analytics and sensor networks</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--=================== Projects ====================-->
+        <section id="project" class="section project">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Projects</h2>
+                    <span class="section__subtitle">My recent work</span>
+                </div>
+                <div class="d-grid project__wrapper">
+                    <!--============== project 1 =============-->
+                    <div class="project__content">
+                        <img src="assets/img/project1.jpg" alt="EatSphere" class="project__img">
+                        <a href="https://github.com/vaibhavk10/EatSphere/" class="project__link">
+                            <h3 class="project__title">EatSphere</h3>
+                        </a>
+                        <p class="project__description">Snack Delivery Application built with Kotlin and Android Studio.
+                            Includes real-time tracking and payment integration.</p>
+                        <a href="https://github.com/vaibhavk10/EatSphere/" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <!--============== project 2 =============-->
+                    <div class="project__content">
+                        <img src="assets/img/project2.jpg" alt="Food-Express" class="project__img">
+                        <a href="https://vaibhavk10.github.io/Food-Express/" class="project__link">
+                            <h3 class="project__title">Food Express</h3>
+                        </a>
+                        <p class="project__description">A responsive food delivery website built using HTML, CSS, and
+                            JavaScript.</p>
+                        <a href="https://github.com/vaibhavk10/Food-Express" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <!--============== project 3 =============-->
+                    <div class="project__content">
+                        <img src="assets/img/project3.jpg" alt="Blockchain-Evidence-System" class="project__img">
+                        <a href="https://blockchain-evidence-system.glitch.me/" class="project__link">
+                            <h3 class="project__title">Blockchain Evidence Management</h3>
+                        </a>
+                        <p class="project__description">A blockchain-based evidence management system to add, view, and
+                            delete records using SHA-256 hashing.</p>
+                        <a href="https://github.com/vaibhavk10/Blockchain-Evidence-System" class="project__link">View
+                            Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <!-- ============== project 4 ============= -->
+                    <div class="project__content">
+                        <img src="assets/img/project4.jpg" alt="ChatMate-Ai" class="project__img">
+                        <a href="https://vaibhavk10.github.io/ChatMate-Ai/" class="project__link">
+                            <h3 class="project__title">ChatMate AI</h3>
+                        </a>
+                        <p class="project__description">A modern chatbot powered by Google's Gemini API with an
+                            intuitive user interface.</p>
+                        <a href="https://github.com/vaibhavk10/ChatMate-Ai" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <!-- ============== project 5 ============= -->
+                    <div class="project__content">
+                        <img src="assets/img/project5.png" alt="Whatsapp bot" class="project__img">
+                        <a href="https://github.com/vaibhavk10/WhatsApp-Bot/" class="project__link">
+                            <h3 class="project__title">WhatsApp Bot</h3>
+                        </a>
+                        <p class="project__description">A WhatsApp bot built using the Baileys library for group
+                            management, including features like tagging all members, muting/unmuting, and many more.
+                            It's designed to help admins efficiently manage WhatsApp groups.</p>
+                        <a href="https://github.com/vaibhavk10/WhatsApp-Bot" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <!-- ============== project 6 ============= -->
+                    <div class="project__content">
+                        <img src="assets/img/project6.png" alt="Flood Warning System" class="project__img">
+                        <a href="https://github.com/vaibhavk10" class="project__link">
+                            <h3 class="project__title">Flood Warning System</h3>
+                        </a>
+                        <p class="project__description">IoT-based flood detection system using sensors and predictive
+                            analysis.</p>
+                        <a href="https://github.com/vaibhavk10" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                <div style="align-items: center;justify-content: center;display: flex; margin-top:10px;"><a
+                        href="https://github.com/vaibhavk10?tab=repositories" class="btn--primary"
+                        style="padding:1.5rem 4rem;margin-top:10px;display: inline-block;align-items:center;text-align:center;justify-content:center;">View
+                        More Projects
+                        <i style="text-align:center;" class="fa-solid fa-angle-down fa-bounce"></i></a></div>
+            </div>
+
+        </section>
 
         </div>
-
-        <nav>
-
-            <a href="#" class="nav-link">Home</a>
-
-            <a href="#projects" class="nav-link">Projects</a>
-
-            <a href="#skills" class="nav-link">Skills</a>
-
-            <a href="#contact" class="nav-link">Contact</a>
-
-        </nav>
-
-    </header>
-
-
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <p class="hello-text">Hello, I'm</p>
-
-                <h1>Vaibhav Kumawat</h1>
-
-                <div class="introduction">
-
-                    <p>A passionate and dedicated undergraduate student currently pursuing a B.Tech in Electronics and Computer Engineering at Vellore Institute of Technology, Chennai. With a strong foundation in technology and a keen interest in innovation, I strive to enhance my skills and contribute to impactful projects that drive organizational and personal growth.</p>
-
-                </div>
-
-                <div class="cta-buttons">
-
-                    <a href="#contact" class="btn primary">Get in Touch</a>
-
-                    <a href="#projects" class="btn secondary">View Projects</a>
-
-                </div>
-
-            </div>
-
+        <div class="swiper-pagination"></div>
+        </div>
+        </div>
         </section>
 
-
-
-        <section id="projects">
-
-            <h2 class="section-title">Projects</h2>
-
-            
-
-            <div class="projects-container">
-
-                <!-- EatSphere Project Card -->
-
-                <div class="project-card">
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-
-                            <i class="fas fa-utensils"></i>
-
-                        </div>
-
-                        <h3>EatSphere</h3>
-
+        <!--=================== Contact ====================-->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="d-grid contact__wrapper">
+                    <div class="contact__content">
+                        <h2 class="contact__title">Interested in working together? Let's talk</h2>
+                        <p class="contact__description">
+                            Ready to work together on your next software project? I'd love to hear from you!
+                            Feel free to get in touch using the contact information below.
+                            Whether uou have a specific project in mind or just want to chat about your software
+                            development needs , I am here to help.
+                            I will respond to your message as quickly as possible and look forward to connecting with
+                            you soon.
+                        </p>
                     </div>
-
-                    
-
-                    <p class="project-subtitle">Snack Delivery Application</p>
-
-                    
-
-                    <div class="project-description">
-
-                        <p>Developed a snack delivery app with real-time tracking and payment integration.</p>
-
+                    <div class="contact__btn">
+                        <a style="align-items:center; gap:10px; text-align:center;"
+                            href="https://www.linkedin.com/in/vaibhavk10" class="btn btn--secondary">Get in touch
+                            <i class="fa-solid fa-handshake"></i></a>
                     </div>
-
-
-
-                    <div class="tech-stack">
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-android"></i>
-
-                            <span>Kotlin</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fas fa-code"></i>
-
-                            <span>Android Studio</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/vaibhavk10/EatSphere" class="project-link" target="_blank">
-
-                            <i class="fab fa-github"></i>
-
-                            <span>View Code</span>
-
-                        </a>
-
-                        <a href="https://vaibhavk10.github.io/EatSphere/" target="_blank" class="project-link">
-
-                            <i class="fas fa-external-link-alt"></i>
-
-                            <span>Live Demo</span>
-
-                        </a>
-
-                    </div>
-
                 </div>
-
-
-
-                <!-- Food Express Website -->
-
-                <div class="project-card">
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-
-                            <i class="fas fa-hamburger"></i>
-
-                        </div>
-
-                        <h3>Food Express</h3>
-
-                    </div>
-
-                    
-
-                    <p class="project-subtitle">Food Delivery Website</p>
-
-                    
-
-                    <div class="project-description">
-
-                        <p>Responsive food delivery website with navigation and menu categories.</p>
-
-                    </div>
-
-
-
-                    <div class="tech-stack">
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-html5"></i>
-
-                            <span>HTML</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-css3-alt"></i>
-
-                            <span>CSS</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-js"></i>
-
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/vaibhavk10/Food-Express" class="project-link" target="_blank">
-
-                            <i class="fab fa-github"></i>
-
-                            <span>View Code</span>
-
-                        </a>
-
-                        <a href="https://vaibhavk10.github.io/Food-Express/" target="_blank" class="project-link">
-
-                            <i class="fas fa-external-link-alt"></i>
-
-                            <span>Live Demo</span>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Flood Warning System -->
-
-                <div class="project-card">
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-
-                            <i class="fas fa-water"></i>
-
-                        </div>
-
-                        <h3>Flood Warning System</h3>
-
-                    </div>
-
-                    
-
-                    <p class="project-subtitle">IoT-based Detection System</p>
-
-                    
-
-                    <div class="project-description">
-
-                        <p>IoT-based flood detection system using sensors and predictive analysis.</p>
-
-                    </div>
-
-
-
-                    <div class="tech-stack">
-
-                        <div class="tech-item">
-
-                            <i class="fas fa-microchip"></i>
-
-                            <span>Arduino</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fas fa-wifi"></i>
-
-                            <span>ESP8266</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-python"></i>
-
-                            <span>Python</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-                        <a href="#" class="project-link" target="_blank">
-
-                            <i class="fab fa-github"></i>
-
-                            <span>View Code</span>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Blockchain Evidence Management -->
-
-                <div class="project-card">
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-
-                            <i class="fas fa-link"></i>
-
-                        </div>
-
-                        <h3>Blockchain Evidence Management</h3>
-
-                    </div>
-
-                    
-
-                    <p class="project-subtitle">Blockchain-based Record System</p>
-
-                    
-
-                    <div class="project-description">
-
-                        <p>A blockchain-based evidence management system to add, view, and delete records using SHA-256 hashing.</p>
-
-                    </div>
-
-
-
-                    <div class="tech-stack">
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-python"></i>
-
-                            <span>Flask</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-html5"></i>
-
-                            <span>HTML</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-css3-alt"></i>
-
-                            <span>CSS</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/vaibhavk10/Blockchain-Evidence-System" class="project-link" target="_blank">
-
-                            <i class="fab fa-github"></i>
-
-                            <span>View Code</span>
-
-                        </a>
-
-                        <a href="https://blockchain-evidence-system.glitch.me/" target="_blank" class="project-link">
-
-                            <i class="fas fa-external-link-alt"></i>
-
-                            <span>Live Demo</span>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ChatMate AI -->
-
-                <div class="project-card">
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-
-                            <i class="fas fa-robot"></i>
-
-                        </div>
-
-                        <h3>ChatMate AI</h3>
-
-                    </div>
-
-                    
-
-                    <p class="project-subtitle">Modern Chatbot with Gemini API</p>
-
-                    
-
-                    <div class="project-description">
-
-                        <p>A modern chatbot powered by Google's Gemini API with an intuitive user interface.</p>
-
-                    </div>
-
-
-
-                    <div class="tech-stack">
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-html5"></i>
-
-                            <span>HTML5</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-css3-alt"></i>
-
-                            <span>CSS3</span>
-
-                        </div>
-
-                        <div class="tech-item">
-
-                            <i class="fab fa-js"></i>
-
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/vaibhavk10/ChatMate-Ai" class="project-link" target="_blank">
-
-                            <i class="fab fa-github"></i>
-
-                            <span>View Code</span>
-
-                        </a>
-
-                        <a href="https://vaibhavk10.github.io/ChatMate-Ai/" target="_blank" class="project-link">
-
-                            <i class="fas fa-external-link-alt"></i>
-
-                            <span>Live Demo</span>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- WhatsApp Bot -->
-
-                <div class="project-card">
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-
-                            <i class="fab fa-whatsapp"></i>
-
-                        </div>
-
-                        <h3>WhatsApp Bot</h3>
-
-                    </div>
-
-                    
-
-                    <p class="project-subtitle">Group Management Bot</p>
-
-                    
-
-                    <div class="project-description">
-
-                        <p>A WhatsApp bot built using the Baileys library for group management, including features like tagging all members, muting/unmuting, and many more. It's designed to help admins efficiently manage WhatsApp groups.</p>
-
-                    </div>
-
-
-
-                    <div class="tech-stack-whatsapp">
-                        <div class="tech-row-whatsapp">
-                            <div class="tech-pill-whatsapp">
-                                <i class="fab fa-node-js"></i>
-                                <span>Node.js</span>
+                <!-- Contact Form -->
+                <div
+                    style="display: flex; min-height: 100vh; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 1.4px; margin-top: 10px;">
+                    <div style="flex: 0 1 700px; margin: auto; padding: 10px; width: 100%;">
+                        <div
+                            style="position: relative; background: #3e3e3e; border-radius: 15px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); width: 100%;">
+                            <div
+                                style="display: flex; align-items: center; padding: 10px 20px; background: #4d4d4f; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                                <div style="margin-right: auto;">
+                                    <div
+                                        style="display: inline-block; width: 8px; height: 8px; margin-right: 3px; border-radius: 8px; background: #ed1c6f;">
+                                    </div>
+                                    <div
+                                        style="display: inline-block; width: 8px; height: 8px; margin-right: 3px; border-radius: 8px; background: #e8e925;">
+                                    </div>
+                                    <div
+                                        style="display: inline-block; width: 8px; height: 8px; border-radius: 8px; background: #74c54f;">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tech-pill-whatsapp">
-                                <i class="fab fa-js"></i>
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
-                        <div class="tech-row-whatsapp">
-                            <div class="tech-pill-whatsapp">
-                                <i class="fas fa-code"></i>
-                                <span>Baileys</span>
+                            <div style="display: flex; flex-wrap: wrap; flex-direction: column; padding: 20px;">
+                                <div style="flex: 1; padding: 20px; color: #32a852;">
+                                    <div style="font-size: 26px; margin-bottom: 10px;">
+                                        <span>CONTACT ME</span>
+                                    </div>
+                                </div>
+                                <div style="">
+                                    <!-- Embed Google Form -->
+                                    <iframe
+                                        src="https://docs.google.com/forms/d/e/1FAIpQLSeb7hYHJgIv1XjxqGrgl5R17VSfSWEYKYwhs1VOxBBAS_MZ5w/viewform?embedded=true"
+                                        width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                                    </iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/vaibhavk10/WhatsApp-Bot" class="project-link" target="_blank">
-
-                            <i class="fab fa-github"></i>
-
-                            <span>View Code</span>
-
-                        </a>
-
-                    </div>
-
                 </div>
-
             </div>
 
-        </section>
-
-
-
-        <section id="skills">
-
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills-container">
-
-                <!-- Cybersecurity Skills -->
-
-                <div class="skill-category">
-
-                    <div class="category-header">
-
-                        <i class="fas fa-shield-alt"></i>
-
-                        <h3>Cybersecurity</h3>
-
-                    </div>
-
-                    <div class="skill-items">
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-user-shield"></i>
-
-                            <span>Cybersecurity Fundamentals</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-bug"></i>
-
-                            <span>Penetration Testing</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-network-wired"></i>
-
-                            <span>Network Security</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Programming Skills -->
-
-                <div class="skill-category">
-
-                    <div class="category-header">
-
-                        <i class="fas fa-code"></i>
-
-                        <h3>Programming</h3>
-
-                    </div>
-
-                    <div class="skill-items">
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-java"></i>
-
-                            <span>Java</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-android"></i>
-
-                            <span>Kotlin</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-python"></i>
-
-                            <span>Python</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-database"></i>
-
-                            <span>SQL</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Web Development Skills -->
-
-                <div class="skill-category">
-
-                    <div class="category-header">
-
-                        <i class="fas fa-globe"></i>
-
-                        <h3>Web Development</h3>
-
-                    </div>
-
-                    <div class="skill-items">
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-html5"></i>
-
-                            <span>HTML</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-css3-alt"></i>
-
-                            <span>CSS</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-js"></i>
-
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Tools -->
-
-                <div class="skill-category">
-
-                    <div class="category-header">
-
-                        <i class="fas fa-tools"></i>
-
-                        <h3>Tools</h3>
-
-                    </div>
-
-                    <div class="skill-items">
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-network-wired"></i>
-
-                            <span>Wireshark</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-search"></i>
-
-                            <span>Nmap</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-hat-cowboy"></i>
-
-                            <span>TryHackMe</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-bug"></i>
-
-                            <span>Burp Suite</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Android Development Skills -->
-
-                <div class="skill-category">
-
-                    <div class="category-header">
-
-                        <i class="fab fa-android"></i>
-
-                        <h3>Android Development</h3>
-
-                    </div>
-
-                    <div class="skill-items">
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-android"></i>
-
-                            <span>Android Studio</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-android"></i>
-
-                            <span>Kotlin</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-location-arrow"></i>
-
-                            <span>Real-time Tracking</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-credit-card"></i>
-
-                            <span>Payment Integration</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Tools & Platforms -->
-
-                <div class="skill-category">
-
-                    <div class="category-header">
-
-                        <i class="fas fa-tools"></i>
-
-                        <h3>Tools & Platforms</h3>
-
-                    </div>
-
-                    <div class="skill-items">
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-linux"></i>
-
-                            <span>Kali Linux</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-git-alt"></i>
-
-                            <span>Git</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-cloud"></i>
-
-                            <span>Heroku</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-palette"></i>
-
-                            <span>Canva</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fab fa-figma"></i>
-
-                            <span>Figma</span>
-
-                        </div>
-
-                        <div class="skill-item">
-
-                            <i class="fas fa-fire"></i>
-
-                            <span>Firebase</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
-
         </section>
-
-
-
-        <section id="contact">
-
-            <h2 class="section-title">Let's Connect</h2>
-
-            <p class="section-subtitle">Open to Software Engineering Internships and Research Opportunities</p>
-
-            
-
-            <div class="contact-outer-container">
-
-                <div class="contact-inner-container">
-
-                    <!-- Email Row -->
-
-                    <div class="contact-row email-row">
-
-                        <div class="contact-left">
-
-                            <div class="icon-box">
-
-                                <i class="far fa-envelope"></i>
-
-                            </div>
-
-                            <span class="email">vaibhavkumawat1003@gmail.com</span>
-
-                        </div>
-
-                        <button class="copy-btn" aria-label="Copy email address">
-
-                            <i class="far fa-copy"></i>
-
-                            <span>Copy Email</span>
-
-                        </button>
-
-                    </div>
-
-
-
-                    <!-- Social Links Container -->
-
-                    <div class="social-links-container">
-
-                        <!-- GitHub -->
-
-                        <div class="contact-row social-row">
-
-                            <div class="contact-left">
-
-                                <div class="icon-box">
-
-                                    <i class="fab fa-github"></i>
-
-                                </div>
-
-                                <div class="social-text">
-
-                                    <div>GitHub</div>
-
-                                    <div class="username">@vaibhavk10</div>
-
-                                </div>
-
-                            </div>
-
-                            <a href="https://github.com/vaibhavk10" target="_blank" class="external-link">
-
-                                <i class="fas fa-external-link-alt"></i>
-
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- LinkedIn -->
-
-                        <div class="contact-row social-row">
-
-                            <div class="contact-left">
-
-                                <div class="icon-box">
-
-                                    <i class="fab fa-linkedin"></i>
-
-                                </div>
-
-                                <div class="social-text">
-
-                                    <div>LinkedIn</div>
-
-                                    <div class="username">@vaibhavk10</div>
-
-                                </div>
-
-                            </div>
-
-                            <a href="https://linkedin.com/in/vaibhavk10" target="_blank" class="external-link">
-
-                                <i class="fas fa-external-link-alt"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            
-
-            <p class="location">Based in India • Open to Remote Opportunities</p>
-
-        </section>
-
     </main>
+    <!--=================== footer ====================-->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="d-grid footer__wrapper"
+                style="display:flex;justify-content:center; align-items:center; text-align:center;">
+                <div class="footer__content">
+                    <h4 class="footer__title">Follow Me</h4>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="mailto:vaibhavkumawat1003@gmail.com" target="_blank" class="footer__social-link">
+                                <i class="fa-regular fa-envelope fa-beat-fade"></i>
+                            </a>
+                        </li>
 
 
+                        <li class="footer__social-item">
+                            <a href="https://www.instagram.com/vaibhav.k10" target="_blank" class="footer__social-link">
+                                <i class="fa-brands fa-instagram fa-beat-fade"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com/in/vaibhavk10/" target="_blank"
+                                class="footer__social-link">
+                                <i class="fa-brands fa-linkedin-in fa-beat-fade"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://github.com/vaibhavk10" target="_blank" class="footer__social-link">
+                                <i class="fa-brands fa-github fa-fade"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://twitter.com/vaibhavk_10" target="_blank" class="footer__social-link">
+                                <i class="fa-brands fa-square-x-twitter fa-fade"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-    <footer>
-
-        <p>© 2024 Vaibhav Kumawat. All rights reserved.</p>
-
+            </div>
+            <p class="footer__copyright">&copy; 2024 Vaibhav Kumawat. All Rights Reserved</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!--=================== SwiperJS  ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+    <!--=================== ScrollReveal ==================-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--=================== Main JS ====================-->
+    <script src="assets/js/main.js"></script>
 </body>
 
-</html> 
+</html>
+
+<script>
+    const typewriterTexts = [
+        "Web Developer",
+        "Android Developer",
+        "Creative Problem Solver",
+    ];
+
+    let currentTextIndex = 0;
+    let charIndex = 0;
+
+    const typewriterElement = document.getElementById("typewriter");
+
+    function typeEffect() {
+        // Get the current text
+        const currentText = typewriterTexts[currentTextIndex];
+
+        // Update the text content with the next character
+        typewriterElement.textContent = currentText.slice(0, charIndex);
+
+        // Increment the character index
+        charIndex++;
+
+        // If the full text has been typed, pause and then switch to the next text
+        if (charIndex > currentText.length) {
+            setTimeout(() => {
+                charIndex = 0; // Reset character index
+                currentTextIndex = (currentTextIndex + 1) % typewriterTexts.length; // Move to next text
+            }, 2000); // Pause before switching
+        }
+
+        // Continue typing every 100ms
+        setTimeout(typeEffect, 100);
+    }
+
+    // Start the typewriter effect
+    typeEffect();
+</script>
